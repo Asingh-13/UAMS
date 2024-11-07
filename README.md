@@ -15,7 +15,7 @@ A web application for managing software access requests, allowing users to reque
 
 ## Project Structure
 
-```plaintext
+
 UserAccessManagementSystem/
 ├── src/
 │   ├── main/
@@ -30,12 +30,14 @@ UserAccessManagementSystem/
 │   │       └── css/                 # CSS for styling
 └── README.md
                       # Project setup and run instructions
-Prerequisites
+## Prerequisites
 Java Development Kit (JDK) - Version 8 or higher
 Apache Tomcat - Version 9 or higher
 PostgreSQL Database - Version 10 or higher
 Maven - For building the project and managing dependencies
-Database Setup
+
+
+## Database Setup
 Create Database:
 
 Open PostgreSQL and create a new database (e.g., uams_db).
@@ -56,7 +58,8 @@ Copy code
 private static final String dbURL = "jdbc:postgresql://localhost:5432/uams_db";
 private static final String dbUsername = "your_postgresql_username";
 private static final String dbPassword = "your_postgresql_password";
-Application Setup
+
+## Application Setup
 Clone the Repository:
 
 bash
@@ -72,14 +75,16 @@ mvn clean install
 Configure Tomcat in IDE (if using an IDE like Eclipse or IntelliJ):
 
 Go to Server settings, add Apache Tomcat, and point to the directory where Tomcat is installed.
-Running the Application
+
+## Running the Application
 Deploy the Application to Tomcat:
 
 Place the generated .war file in the webapps folder of your Tomcat installation or run the application directly from your IDE.
 Start Tomcat:
 
 Run Tomcat by executing startup.bat (Windows) or startup.sh (Linux/macOS) in the bin folder of the Tomcat installation.
-Accessing the Application
+
+## Accessing the Application
 Open a Web Browser:
 
 Go to http://localhost:8080/UserAccessManagementSystem/
@@ -92,7 +97,8 @@ User Roles:
 Admin: Manages users and software applications.
 Manager: Approves or rejects access requests from employees.
 Employee: Requests access to various software applications.
-Additional Information
+
+## Additional Information
 Session Management: Each user must log in to access their role-specific pages. Sessions will expire after 30 minutes of inactivity.
 Logout: A user can log out by clicking the logout link, which ends their session.
 Troubleshooting
