@@ -16,7 +16,7 @@ A web application for managing software access requests, allowing users to reque
 ## Project Structure
 
 
-UserAccessManagementSystem/
+'''UserAccessManagementSystem/
 ├── src/
 │   ├── main/
 │   │   ├── java/
@@ -28,7 +28,7 @@ UserAccessManagementSystem/
 │   │       │   ├── views/        # JSP views (login, signup, adminDashboard, etc.)
 │   │       │   └── web.xml       # Deployment descriptor
 │   │       └── css/              # CSS for styling
-└── README.md                     # Project setup and run instructions
+└── README.md                     # Project setup and run instructions'''
 
                 
 ## Prerequisites
