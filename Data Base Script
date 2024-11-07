@@ -1,0 +1,51 @@
+-- Switch to the desired database (if not already selected)
+-- For example, if your database is named `uams_db`:
+-- \c uams_db;
+
+-- Drop existing tables if they exist to avoid conflicts
+DROP TABLE IF EXISTS requests;
+DROP TABLE IF EXISTS software;
+DROP TABLE IF EXISTS users;
+
+-- Create users table
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username TEXT UNIQUE NOT NULL,
+    password TEXT NOT NULL,
+    role TEXT CHECK (role IN ('Employee', 'Manager', 'Admin')) NOT NULL
+);
+
+-- Insert sample data into users table (optional)
+INSERT INTO users (username, password, role) VALUES 
+('admin', 'adminpassword', 'Admin'),
+('manager1', 'managerpassword', 'Manager'),
+('employee1', 'employeepassword', 'Employee');
+
+-- Create software table
+CREATE TABLE software (
+    id SERIAL PRIMARY KEY,
+    name TEXT UNIQUE NOT NULL,
+    description TEXT,
+    access_levels TEXT CHECK (access_levels IN ('Read', 'Write', 'Admin'))
+);
+
+-- Insert sample data into software table (optional)
+INSERT INTO software (name, description, access_levels) VALUES 
+('Accounting Software', 'Software for accounting and finance', 'Admin'),
+('HR Management', 'Software for HR and payroll management', 'Write'),
+('Project Tracker', 'Project tracking and collaboration tool', 'Read');
+
+-- Create requests table
+CREATE TABLE requests (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id),
+    software_id INTEGER REFERENCES software(id),
+    access_type TEXT CHECK (access_type IN ('Read', 'Write', 'Admin')),
+    reason TEXT,
+    status TEXT CHECK (status IN ('Pending', 'Approved', 'Rejected')) DEFAULT 'Pending'
+);
+
+-- Insert sample data into requests table (optional)
+INSERT INTO requests (user_id, software_id, access_type, reason, status) VALUES
+(3, 1, 'Read', 'Need access to view finance reports', 'Pending'),
+(2, 2, 'Write', 'Managing employee records', 'Approved');
