@@ -20,16 +20,17 @@ UserAccessManagementSystem/
 ├── src/
 │   ├── main/
 │   │   ├── java/
-│   │   │   ├── controller/          # Servlets for handling requests
-│   │   │   ├── dao/                 # Data Access Objects for database interaction
-│   │   │   └── model/               # Java classes representing data models
+│   │   │   ├── controller/       # Servlets for handling requests
+│   │   │   ├── dao/              # Data Access Objects for database interaction
+│   │   │   └── model/            # Java classes representing data models
 │   │   └── webapp/
 │   │       ├── WEB-INF/
-│   │       │   ├── views/           # JSP views (login, signup, adminDashboard, etc.)
-│   │       │   └── web.xml          # Deployment descriptor
-│   │       └── css/                 # CSS for styling
-└── README.md
-                      # Project setup and run instructions
+│   │       │   ├── views/        # JSP views (login, signup, adminDashboard, etc.)
+│   │       │   └── web.xml       # Deployment descriptor
+│   │       └── css/              # CSS for styling
+└── README.md                     # Project setup and run instructions
+
+                
 ## Prerequisites
 Java Development Kit (JDK) - Version 8 or higher
 Apache Tomcat - Version 9 or higher
