@@ -2,6 +2,8 @@
 
 A web application for managing software access requests, allowing users to request access, managers to approve or reject requests, and admins to manage users and software.
 
+## Demo Link : https://drive.google.com/drive/folders/1_JlEIgh_DIc8YP-2j0P2d2ii6eYNA2gO?usp=sharing
+
 ## Table of Contents
 1. [Project Structure](#project-structure)
 2. [Prerequisites](#prerequisites)
